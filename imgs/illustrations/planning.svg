@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-labelledby="planTitle" width="480" height="360">
+  <title id="planTitle">Architects planning a building from blueprints</title>
+  <path d="M70 96 C40 134 50 214 112 244 C172 272 206 308 280 298 C366 287 430 240 420 176 C411 116 364 88 296 84 C212 79 104 60 70 96 Z" fill="#e7edf7"/>
+  <!-- blueprint sheet -->
+  <g>
+    <rect x="120" y="92" width="240" height="170" rx="10" fill="#2f5aa8"/>
+    <rect x="120" y="92" width="240" height="170" rx="10" fill="#2f5aa8"/>
+    <g stroke="#8aa6dd" stroke-width="2" fill="none" opacity="0.55">
+      <path d="M120 122h240M120 152h240M120 182h240M120 212h240M120 242h240"/>
+      <path d="M150 92v170M180 92v170M210 92v170M240 92v170M270 92v170M300 92v170M330 92v170"/>
+    </g>
+    <!-- floor plan lines -->
+    <g stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M160 132 h150 v92 h-150 z"/>
+      <path d="M160 178 h70 M230 132 v92 M230 178 h80"/>
+    </g>
+    <circle cx="296" cy="200" r="9" fill="none" stroke="#b3873f" stroke-width="3"/>
+  </g>
+  <!-- ruler + pencil -->
+  <rect x="120" y="276" width="180" height="14" rx="4" fill="#cdd8ea"/>
+  <g stroke="#1b2440" stroke-width="2"><path d="M138 276v8M156 276v8M174 276v8M192 276v8M210 276v8M228 276v8M246 276v8M264 276v8M282 276v8"/></g>
+  <g transform="rotate(38 330 286)"><rect x="306" y="280" width="70" height="11" rx="2" fill="#b3873f"/><path d="M376 280 l12 5.5 l-12 5.5 z" fill="#1b2440"/></g>
+  <!-- architect figure -->
+  <g>
+    <path d="M372 300 V250 a26 26 0 0 1 52 0 V300 Z" fill="#1b2440"/>
+    <circle cx="398" cy="222" r="20" fill="#e6b98f"/>
+    <path d="M378 218 a20 20 0 0 1 40 0 q-20 -16 -40 0 Z" fill="#1b2440"/>
+    <path d="M414 256 q22 4 18 40" fill="none" stroke="#e6b98f" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  <circle cx="104" cy="128" r="6" fill="#b3873f"/>
+  <circle cx="392" cy="120" r="5" fill="#2f5aa8"/>
+</svg>

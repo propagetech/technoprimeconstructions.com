@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-labelledby="trustTitle" width="480" height="360">
+  <title id="trustTitle">Two people shaking hands in agreement</title>
+  <path d="M66 100 C38 142 50 212 112 244 C172 274 206 312 282 300 C366 287 428 240 418 178 C409 120 360 90 292 86 C208 81 98 64 66 100 Z" fill="#e7edf7"/>
+  <ellipse cx="240" cy="300" rx="150" ry="14" fill="#d8e0ee"/>
+  <g>
+    <path d="M96 300 V236 a36 36 0 0 1 72 0 V300 Z" fill="#1b2440"/>
+    <circle cx="132" cy="196" r="28" fill="#e6b98f"/>
+    <path d="M104 192 a28 28 0 0 1 56 0 q-28 -22 -56 0 Z" fill="#1b2440"/>
+  </g>
+  <g>
+    <path d="M312 300 V236 a36 36 0 0 1 72 0 V300 Z" fill="#2f5aa8"/>
+    <circle cx="348" cy="196" r="28" fill="#cd966b"/>
+    <path d="M320 194 a28 28 0 0 1 56 0 q-28 -20 -56 0 Z" fill="#1b2440"/>
+  </g>
+  <path d="M150 250 q44 -8 90 14" fill="none" stroke="#e6b98f" stroke-width="18" stroke-linecap="round"/>
+  <path d="M330 250 q-44 -8 -90 14" fill="none" stroke="#cd966b" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="240" cy="262" r="16" fill="#b3873f"/>
+  <path d="M240 150 v20 M218 162 l14 12 M262 162 l-14 12" stroke="#b3873f" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="104" cy="130" r="6" fill="#b3873f"/>
+  <circle cx="376" cy="128" r="5" fill="#2f5aa8"/>
+</svg>
