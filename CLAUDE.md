@@ -24,9 +24,8 @@ J.P. Nagar 2nd Phase, Bangalore 560078. Email-led contact, no backend.
   404.html              Styled not-found (stays at root; root-absolute asset paths)
   robots.txt sitemap.xml site.webmanifest
   css/main.css js/main.js fonts/ (Inter + Fraunces woff2)
-  imgs/                 logo, favicon.*, icons, og-image.jpg, hero/about/project photos
+  imgs/                 logo, favicon.*, icons, og-image.jpg, hero/about/project/elements photos
   imgs/gallery/         gallery-1..6.webp (project renders)
-  imgs/illustrations/   Brand-recoloured undraw-style SVGs (planning, eco, trust, location)
   docs/redesign-decisions.md   The plan and decisions log
   tools/                Dev-only (contrast-audit.mjs); gitignored deps, not deployed
   archive/              Previous builder-exported site (not linked, disallowed)
@@ -79,13 +78,21 @@ the preview is the GitHub Pages project page at
 - **Canonical, `og:url`, sitemap `loc`, JSON-LD `@id` stay absolute** on the production
   domain. Link with the trailing slash (`/slug` 301-redirects to `/slug/`).
 
-## 5. Imagery: photos + brand illustrations
-A deliberate mix. **Photos** (the TechnoPrime Vasudha renders and the team photo) for the
-hero, project and gallery. **Illustrations** in `imgs/illustrations/` are original
-undraw-style flat SVGs recoloured to the brand (navy/blue/gold), used as section accents
-(planning, eco, trust, location). The undraw.co public API is no longer available, so the
-illustrations were authored in that style rather than fetched. The original builder
-gallery also held unrelated stock; only the real project imagery was kept.
+## 5. Imagery: photos only
+**Real photos throughout**, no illustrations. The TechnoPrime Vasudha renders and the
+planning/team photo carry the hero, project, about and gallery. The big split-section
+slots that once held undraw-style SVGs now use real photos too: the navy eco band uses
+`imgs/elements.webp` (a sunlit modern-architecture shot, also the live builder site's
+"elements" image) and the Why-us trust band uses a Vasudha gallery render
+(`gallery/gallery-4.webp`). The Projects "Where it is" band uses `gallery/gallery-3.webp`
+as the poster for a **click-to-load Google map** (`.map-embed`): the iframe is injected by
+`js/main.js` only on click (roadmap view), so the page carries no third-party map code by
+default; with JS off it is a plain link to Google Maps. This is the one sanctioned
+external embed, and it is lazy, not always-on. Small inline `.ico` SVGs (the brand
+line-icons) are kept and are not illustrations. The original builder gallery also held
+unrelated stock; only the real project imagery was kept. The `.split-media` photo
+treatment (4:3 cover, hairline border, soft shadow) applies to all of these; there is no
+separate `.illus` style anymore.
 
 ## 6. SEO, schema, accessibility, copy
 - Per-page unique title/description/canonical/OG/Twitter. JSON-LD:
@@ -95,6 +102,11 @@ gallery also held unrelated stock; only the real project imagery was kept.
   match the visible text); `ContactPage` on Contact.
 - WCAG 2.1 AA, one `<h1>` per page, ordered headings, landmarks, skip link, keyboard nav
   with a no-JS fallback, visible focus, `prefers-reduced-motion`, image width/height.
+- **Gallery carousel**: `js/main.js` progressively enhances the `.gallery` grid into a
+  full-screen lightbox carousel (prev/next, optional autoplay + play/pause, thumbnail
+  strip, captions, counter, keyboard ←/→/Esc/Space, swipe, focus trap, a slow ken-burns
+  zoom on each image gated by `prefers-reduced-motion`). With JS off, the gallery `<a>`
+  links just open the full images. Built entirely in JS/CSS; no markup change to the page.
 - **No em dashes** in copy. Contact is email-led plus a real `tel:` link; the form
   composes a `mailto:` draft (no backend), and nothing is stored.
 

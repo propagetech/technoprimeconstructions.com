@@ -85,6 +85,21 @@ site. No em dashes anywhere.
   and holistic living. Used as section accents and on the "why us" and contact pages.
   Mixing real photography with brand-recoloured illustrations is the explicit direction
   for this site.
+- **Update (2026-06-17): illustrations dropped in favour of real photos.** The three big
+  undraw-style SVGs (eco, trust, location) were replaced with photography, leaving the
+  site photos-only. Eco band (Home) now uses `imgs/elements.webp` (the live builder
+  site's sunlit architecture image, copied locally); the Why-us trust band uses
+  `gallery/gallery-4.webp` (residents on the balconies) and the Projects "Where it is"
+  band uses `gallery/gallery-3.webp` (the building in its J.P. Nagar street setting). The
+  `imgs/illustrations/` folder and the `.split-media.illus` CSS were removed. The small
+  inline `.ico` line-icons were kept.
+- **Update (2026-06-17): Projects "Where it is" uses a click-to-load Google map.** The
+  streetscape render (`gallery/gallery-3.webp`) now acts as a poster with a "View map"
+  cue; `js/main.js` swaps in the Google Maps iframe (roadmap view) only when the visitor
+  clicks. This keeps the page free of third-party code and tracking by default while
+  still offering the interactive map on demand. With JS off, the `.map-embed` is just a
+  link to Google Maps. This is the one sanctioned external embed, and it is lazy by
+  design rather than always-on.
 
 ### 8. SEO and schema
 Per-page unique title, description, canonical, Open Graph and Twitter; a real `robots.txt`
