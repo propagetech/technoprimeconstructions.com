@@ -145,7 +145,7 @@ p { text-wrap:pretty; }
 .nav-toggle[aria-expanded="true"] .bars span:nth-child(3){transform:translateY(-5px) rotate(-45deg);}
 .nav-menu { display:flex; align-items:center; gap:0.4rem; }
 .nav-links { display:flex; align-items:center; gap:0.1rem; list-style:none; padding:0; margin:0; }
-.nav-links a { display:inline-block; padding:0.55em 0.8em; border-radius:var(--radius-sm); color:var(--ink-2); font-weight:500; text-decoration:none; transition:color .15s var(--ease), background-color .15s var(--ease); }
+.nav-links a { display:inline-block; padding:0.55em 0.8em; border-radius:var(--radius-sm); color:var(--ink-2); font-weight:600; font-size:0.84rem; text-transform:uppercase; letter-spacing:0.07em; text-decoration:none; transition:color .15s var(--ease), background-color .15s var(--ease); }
 .nav-links a:hover { color:var(--ink); background:rgba(47,90,168,0.08); }
 .nav-links a[aria-current="page"] { color:var(--ink); font-weight:600; }
 .nav-links a[aria-current="page"]::after { content:""; display:block; height:2px; border-radius:2px; background:var(--gold); margin-top:3px; }
