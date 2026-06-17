@@ -338,9 +338,8 @@ a.card:hover h3 { color:var(--blue-ink); }
 
 .site-footer { background:var(--navy-2); color:var(--navy-muted); padding-block:clamp(3rem,2rem + 3vw,4.5rem) 2rem; }
 .footer-grid { display:grid; grid-template-columns:1.6fr 1fr 1fr 1.3fr; gap:2rem; }
-.footer-logo { display:inline-flex; align-items:center; gap:0.6rem; margin-bottom:1rem; }
-.footer-logo img { width:42px; height:42px; border-radius:11px; }
-.footer-logo strong { font-family:var(--font-head); font-weight:700; font-size:1.4rem; color:#fff; }
+.footer-logo { display:inline-block; background:#fff; border-radius:12px; padding:0.55rem 0.85rem; margin-bottom:1rem; box-shadow:var(--shadow-sm); }
+.footer-logo img { display:block; width:auto; height:32px; border-radius:0; }
 .footer-brand p { color:var(--navy-muted); max-width:36ch; font-size:0.97rem; }
 .footer-contact { list-style:none; padding:0; margin:1.1rem 0 0; display:grid; gap:0.5rem; font-size:0.95rem; }
 .footer-contact a { color:var(--gold-on-dark); text-decoration:none; }

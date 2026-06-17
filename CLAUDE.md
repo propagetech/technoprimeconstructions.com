@@ -27,7 +27,7 @@ J.P. Nagar 2nd Phase, Bangalore 560078. Email-led contact, no backend.
   imgs/                 logo, favicon.*, icons, og-image.jpg, hero/about/project/elements photos
   imgs/gallery/         gallery-1..6.webp (project renders)
   docs/redesign-decisions.md   The plan and decisions log
-  tools/                Dev-only (contrast-audit.mjs); gitignored deps, not deployed
+  tools/                Dev-only (contrast-audit.mjs, make-favicons.mjs); gitignored deps
   archive/              Previous builder-exported site (not linked, disallowed)
 ```
 No HTML partials (no build step): header, footer and the floating button are duplicated
@@ -57,6 +57,17 @@ audit (section 7) after any colour change.
 Rules: primary buttons are `--blue` + white text. The eyebrow uses gold (`--gold-ink` on
 light, `--gold-on-dark` on navy). Gold is only 3.03:1 on light, so use it as a small
 accent, never body text; use `--gold-ink` for gold text. Focus ring is `--blue-strong`.
+
+### Logo, favicon and footer brand
+The header and the footer both use the full `imgs/logo.webp` lockup (emblem + wordmark).
+The logo's navy parts are invisible on the navy footer, so the footer logo sits on a white
+rounded `.footer-logo` badge (padding + `--radius`). The favicon set is generated from the
+**real logo emblem** (the "TP" mark, the leftmost band of the horizontal lockup) by
+`tools/make-favicons.mjs` (playwright-core + Chrome): it crops the emblem and seats it on a
+white tile, writing `favicon.svg` (white tile + hairline border + emblem), `favicon.webp`,
+`apple-touch-icon.png` and `icon-192/512.png`. Re-run `node tools/make-favicons.mjs` after
+any logo change. White tile, not the kit's charcoal: the emblem is two-tone blue and its
+navy would vanish on a dark tile.
 
 ### Colour belongs to the component, not the container
 A container selector that sets `color` on bare element descendants (e.g. `.section-head p`,
